@@ -2,6 +2,7 @@
 
 
 Recommended reading order:
+
 1. MVG Preset
 2. Boundaries
 3. Failure Budget
