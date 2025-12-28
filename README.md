@@ -2,10 +2,13 @@
 Applied practitioner system for adopting LC-OS.
 LC-OS adoption kit (Field Manual, Quick Start, Templates, Examples)
 
-## Related Research
+## Relationship to LC-OS Research Repository
 
-This project operationalizes the LC-OS framework described in the
-research papers and the Mahdi Ledger.
+This repository contains the **practitioner-facing LC-OS Project**:
+templates, examples, field manual, and adoption materials.
 
-📘 Research Repository:
+The underlying research papers and The Mahdi Ledger are published separately here:
 https://github.com/LivingFramework/LC-OS
+
+Readers should consult the research repository for theory and evidence,
+and this repository for implementation and practice.
