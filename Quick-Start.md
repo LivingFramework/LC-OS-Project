@@ -115,7 +115,7 @@ These gains compound over time.
 - Challenge Protocol (productive disagreement)
 - Affective Governance (tone management)
 - etc.
-- 
+  
 **If failures are frequent:** Start using the Failure Log template to track patterns.
 
 ---
@@ -149,7 +149,7 @@ DURING SESSION
 - Numbers only from Canonical Numbers
 
 WHEN THINGS BREAK
-- Stop â†’ Diagnose â†’ Rollback â†’ Note
+- Stop  Diagnose  Rollback  Note
 
 END OF SESSION
 - Update Running Document
