@@ -14,7 +14,7 @@
 
 ## Step 1: Create Your Running Document (10 minutes)
 
-Copy the template from `minimal-LC-OS`folder
+Copy the template from `minimal-LC-OS/`folder
 
 Fill in:
 - Project name
