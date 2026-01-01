@@ -37,17 +37,19 @@ LC-OS is model-agnostic. It works with ChatGPT, Claude, Gemini, or any conversat
 
 ### 📁 Minimal-LC-OS/
 **Start here.** Three templates that give you 80% of the benefit:
-- Running Document — your shared memory
+- Running Document — your shared memory for continuity
 - Canonical Numbers — single source of numerical truth
 - Failure Log — track what breaks and how it's fixed
+- Strategy Master — governed textual truth and operating rules
 
 ### 📁 Full-LC-OS/
 **The complete system.** Everything in minimal, plus:
 - Repair Protocol — structured recovery process
 - Stability Ping — regular alignment checks
 - Challenge Protocol — productive disagreement
-- Affective Governance — tone and emotional stability rules
+- Communication Memo — tone and emotional stability rules
 - TraceSpec — detailed failure logging schema
+- Life System Master — Operating map defines cadence, modes, decision rights etc
 
 ### 📁 References/
 **Background reading.** Paper summaries, failure taxonomy, and conceptual foundations.
