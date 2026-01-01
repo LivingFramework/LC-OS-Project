@@ -83,16 +83,6 @@ LC-OS is **not** for:
 
 ---
 
-## Origin
-
-LC-OS emerged from a year-long research collaboration between a human and an AI system, documented across four academic papers and a companion journal (The Mahdi Ledger).
-
-The papers are available at: https://osf.io/vmk7y/
-
-This toolkit translates that research into practical templates anyone can use.
-
----
-
 ## License
 
 CC BY 4.0 — Use freely with attribution.
