@@ -1,6 +1,7 @@
 # LC-OS Project
 
 **A Lightweight Operating System for Long-Horizon Human–AI Collaboration**
+https://doi.org/10.5281/zenodo.18262090
 
 ---
 
