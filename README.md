@@ -2,6 +2,7 @@
 
 **A Lightweight Operating System for Long-Horizon Human–AI Collaboration**
 
+> 🌐 **[Full documentation and assessment tool → livingframework.github.io](https://livingframework.github.io/)**
 
 ---
 
@@ -122,6 +123,19 @@ This toolkit is based on a series of research papers documenting a year-long hum
 → [LC-OS Research Papers](https://github.com/LivingFramework/LC-OS)
 
 ---
+
+---
+
+## The Living Framework Ecosystem
+
+| | Resource | What it contains |
+|--|----------|-----------------|
+| 🌐 | [**Website**](https://livingframework.github.io/) | Full documentation, AI readiness assessment, quick-start guide |
+| 📚 | [**LC-OS Research**](https://github.com/LivingFramework/LC-OS) | Four published papers, Mahdi Ledger, empirical foundations |
+| 🛠️ | [**LC-OS Project**](https://github.com/LivingFramework/LC-OS-Project) | Practitioner toolkit — templates, worked examples, field manual |
+| ⚙️ | [**Cowork Templates**](https://github.com/LivingFramework/LivingFramework.github.io) | Governance templates optimised for Claude Cowork |
+
+*Each resource is standalone. Together they form a complete governance stack — from theory to daily practice.*
 
 ## License
 
