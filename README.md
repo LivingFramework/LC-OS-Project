@@ -46,15 +46,27 @@ LC-OS is for practitioners who:
 - Have experienced drift, confusion, or trust breakdown in long collaborations
 - Want a lightweight system, not heavy infrastructure
 
-It's not for:
+---
 
-- Single-session tasks or quick queries
-- Fully automated pipelines with no human involvement
-- Those seeking a plug-and-play software solution
+## Get Started in 3 Minutes (Automated)
+
+The fastest way to start a new LC-OS project:
+
+```bash
+# Requires Node.js (v18+)
+node scripts/init-project.js
+```
+
+The script asks 3 questions and creates a fully structured project folder — either
+minimal (3 files) or full (complete toolkit with folder structure). No npm install needed.
+
+→ [Full init script instructions](./scripts/README.md)
+
+**No Node.js?** Use the manual path below.
 
 ---
 
-## Two Paths
+## Two Manual Paths
 
 ### Minimal (Start Here)
 
@@ -93,15 +105,28 @@ A brief check-in after major milestones: Are we still aligned? Any drift? One im
 
 ---
 
-## Quick Start
+## See It In Action
 
-1. **Choose your path** — [Minimal](./minimal/) or [Full](./full/)
-2. **Copy the templates** — download or fork this repo
-3. **Start a session** — share the Running Document with your AI at the start
-4. **Work normally** — but log decisions and update the document as you go
-5. **When things break** — use the repair protocol instead of pushing through
+The `examples/` folder contains fully filled-in governance files across four real domains:
 
-That's it. The system is lightweight by design.
+| Example | What it shows |
+|---------|---------------|
+| [Marketing Campaign](./examples/marketing-campaign/) | Numbers governance, ICP enforcement, paid channel failure |
+| [Research Paper](./examples/research-paper/) | Citation discipline, hallucination prevention, terminology lock |
+| [Client Onboarding](./examples/client-onboarding/) | Scope control, commitment tracking, confidentiality |
+| [Personal Productivity](./examples/personal-productivity/) | Pillar separation, personal boundaries, life system drift |
+| [History & Evolution](./examples/history-evolution/) | How the files change over 6 weeks — the movie, not a snapshot |
+
+→ [Browse all examples](./examples/)
+
+---
+
+## Maintaining the System
+
+Once you've started, these two files help you sustain the practice:
+
+- **[Weekly Review Checklist](./Weekly-Review-Checklist.md)** — 15-minute ritual to keep your files current
+- **[Consistency & Discipline Guide](./Consistency-Guide.md)** — Common decay patterns and how to fix them
 
 ---
 
@@ -122,6 +147,35 @@ This toolkit is based on a series of research papers documenting a year-long hum
 
 → [LC-OS Research Papers](https://github.com/LivingFramework/LC-OS)
 
+The Practitioners Guide is also available in this repo as a searchable Markdown reference:
+
+→ [Practitioners Guide (Markdown)](./references/Practitioners_Guide.md)
+
+---
+
+## What's in This Repo
+
+```
+LC-OS-Project/
+├── scripts/
+│   ├── init-project.js      ← Automated project setup (Node.js)
+│   └── README.md            ← Script usage instructions
+├── minimal/                 ← 3 core templates — start here
+├── full/                    ← Complete governance toolkit
+├── examples/                ← Filled-in examples by domain
+│   ├── marketing-campaign/
+│   ├── research-paper/
+│   ├── client-onboarding/
+│   ├── personal-productivity/
+│   └── history-evolution/   ← How files evolve over time
+├── references/
+│   └── Practitioners_Guide.md  ← PDF converted to searchable Markdown
+├── Weekly-Review-Checklist.md  ← 15-min weekly maintenance ritual
+├── Consistency-Guide.md        ← Common failure modes and fixes
+├── QUICK-START.md              ← Guided first session
+└── README.md                   ← This file
+```
+
 ---
 
 ## The Living Framework Ecosystem
@@ -130,20 +184,14 @@ This toolkit is based on a series of research papers documenting a year-long hum
 |--|----------|-----------------|
 | 🌐 | [**Website**](https://livingframework.github.io/) | Full documentation, AI readiness assessment, quick-start guide |
 | 📚 | [**LC-OS Research**](https://github.com/LivingFramework/LC-OS) | Eight published papers, Mahdi Ledger, empirical foundations |
-| 🛠️ | [**LC-OS Project**](https://github.com/LivingFramework/LC-OS-Project) | Practitioner toolkit — templates, worked examples, field manual |
+| 🛠️ | [**LC-OS Project**](https://github.com/LivingFramework/LC-OS-Project) | Practitioner toolkit — templates, examples, automation scripts |
 | ⚙️ | [**Cowork Templates**](https://github.com/LivingFramework/LivingFramework.github.io) | Governance templates optimised for Claude Cowork |
 
-*Each resource is standalone. Together they form a complete governance stack — from theory to daily practice.*
+---
 
 ## License
 
 CC BY 4.0 — Use freely, adapt as needed, attribution appreciated.
-
----
-
-## Contributing
-
-This is a living project. If you adopt LC-OS and develop improvements, variations, or domain-specific templates, contributions are welcome.
 
 ---
 
