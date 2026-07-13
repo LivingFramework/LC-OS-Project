@@ -1,216 +1,213 @@
 # Full LC-OS Toolkit
 
-**The complete system for sustained human–AI collaboration.**
+**Advanced governance for complex, high-stakes, or long-running human–AI collaboration.**
 
 ---
 
-## What's Here
+## What this is
 
-The full toolkit includes everything you need to run LC-OS across complex, multi-domain work. It builds on the [Minimal tier](../minimal/) and adds:
+The Full toolkit is no longer the default starting point.
 
-- **Strategy Master** — long-term strategic truth (principles, policies, boundaries)
-- **Worked examples** as separate files (so templates stay clean)
-- **Repair Protocol** — structured recovery when things break
-- **Stability Ping** — regular alignment checks to catch drift early
-- **Challenge Protocol** — structured disagreement without conflict
-- **Affective Governance** — rules for tone and emotional stability
-- **TraceSpec** — a schema for detailed failure logging
+It is the advanced LC-OS path for work where lightweight project memory is not enough.
 
-Use this tier if:
+Use it when the collaboration is complex, long-running, multi-domain, high-stakes, emotionally sensitive, or needs clear auditability.
 
-- You're working across multiple domains or projects
-- Failures are frequent enough to need systematic tracking
-- Trust, tone, or emotional dynamics are becoming factors
-- You want the full governance layer, not just memory persistence
+If you are new to LC-OS, start with [Minimal](../minimal/) and upgrade only when the work requires it.
+
+---
+
+## What changed in the modern AI context
+
+Modern AI tools increasingly support project spaces, uploaded files, saved memory, custom instructions, connectors, longer context windows, and agentic workflows.
+
+That means some users no longer need to manually recreate context every session.
+
+But advanced workflows still need explicit governance when:
+
+- the AI can act across files or tools
+- multiple domains or projects interact
+- strategic decisions must remain stable
+- numerical claims must be authoritative
+- disagreements need structured resolution
+- trust, tone, or emotional dynamics affect the work
+- failures must be reconstructed later
+
+The Full toolkit exists for those situations.
+
+---
+
+## Use this tier if
+
+- you are working across multiple domains or pillars
+- the project spans weeks or months
+- accuracy, auditability, or recovery matter
+- previous AI errors have caused rework or trust damage
+- you need the AI to challenge assumptions, not just comply
+- you need stable principles and boundaries across sessions
+- the work involves sensitive personal, strategic, financial, research, or client material
+
+Do not use this tier if Minimal already protects the work.
 
 ---
 
 ## Contents
 
-### Core Templates (The Three Authoritative Files)
+### Core authoritative files
 
-| File | Purpose |
-|------|---------|
-| [STRATEGY-MASTER-TEMPLATE.md](./STRATEGY-MASTER-TEMPLATE.md) | Strategic truth — principles, policies, boundaries (stable) |
-| [canonical-numbers-template.md](./canonical-numbers-template.md) | Numeric truth — single source for all numbers |
-| [running-document-template.md](./running-document-template.md) | Session truth — context, decisions, corrections (dynamic) |
+| File | Status | Purpose |
+|---|---|---|
+| [STRATEGY-MASTER-TEMPLATE.md](./STRATEGY-MASTER-TEMPLATE.md) | Advanced | Long-term principles, boundaries, policies, and strategic logic |
+| [canonical-numbers-template.md](./canonical-numbers-template.md) | Core when numbers matter | Numeric truth — budgets, targets, metrics, assumptions, calculations |
+| [running-document-template.md](./running-document-template.md) | Core | Active project state, decisions, corrections, and current context |
 
-These three files form the **authoritative file architecture** from the LC-OS research. Each holds a different layer of truth:
+These files separate different kinds of truth:
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    STRATEGY MASTER                          │
-│              (Principles, policies, logic)                  │
-│                  Rarely changes                             │
-│                     ↓ informs                               │
-├─────────────────────────────────────────────────────────────┤
-│                  CANONICAL NUMBERS                          │
-│              (Numeric truth, data, values)                  │
-│               Updated when data changes                     │
-│                     ↓ referenced by                         │
-├─────────────────────────────────────────────────────────────┤
-│                  RUNNING DOCUMENT                           │
-│         (Session decisions, corrections, context)           │
-│                Updated every session                        │
-└─────────────────────────────────────────────────────────────┘
+```text
+STRATEGY MASTER
+  Stable principles, boundaries, policies
+        ↓ informs
+CANONICAL NUMBERS
+  Authoritative numeric truth
+        ↓ referenced by
+RUNNING DOCUMENT
+  Current project/session state
 ```
 
-### Failure Tracking
+In a modern AI workspace, these may live as uploaded project files, connected documents, GitHub files, shared docs, or local files. The location is flexible. The authority relationship is not.
 
-| File | Purpose |
-|------|---------|
-| [failure-log-template.md](./failure-log-template.md) | Track what breaks and how it's fixed |
+---
 
-### Worked Examples
+### Failure tracking
+
+| File | Status | Purpose |
+|---|---|---|
+| [failure-log-template.md](./failure-log-template.md) | Conditional | Track meaningful failures and repairs |
+
+Use the Failure Log when failures are repeated, costly, or worth learning from.
+
+---
+
+### Worked examples
 
 | File | Shows |
-|------|-------|
-| [running-document-worked-example.md](./running-document-worked-example.md) | A filled-in Running Document |
-| [canonical-numbers-worked-example.md](./canonical-numbers-worked-example.md) | A filled-in Canonical Numbers file |
-| [failure-log-worked-example.md](./failure-log-worked-example.md) | A filled-in Failure Log with pattern analysis |
+|---|---|
+| [running-document-worked-example.md](./running-document-worked-example.md) | Filled-in Running Document |
+| [canonical-numbers-worked-example.md](./canonical-numbers-worked-example.md) | Filled-in Canonical Numbers file |
+| [failure-log-worked-example.md](./failure-log-worked-example.md) | Failure Log with pattern analysis |
 
-### Protocols & Guides
-
-| File | Purpose |
-|------|---------|
-| [repair-protocol.md](./repair-protocol.md) | Stop → Diagnose → Rollback → Note |
-| [stability-ping-template.md](./stability-ping-template.md) | Regular alignment checks |
-| [challenge-protocol.md](./challenge-protocol.md) | Structured disagreement |
-| [affective-governance.md](./affective-governance.md) | Tone and emotional stability rules |
-
-### Advanced
-
-| File | Purpose |
-|------|---------|
-| [tracespec-schema.md](./tracespec-schema.md) | Structured schema for detailed failure logging |
+Examples are patterns to adapt, not forms to copy rigidly.
 
 ---
 
-## How to Adopt the Full Toolkit
+### Protocols and guides
 
-### If you're coming from Minimal
-
-You already have the Running Document, Canonical Numbers, and Failure Log. To upgrade:
-
-1. Create a **Strategy Master** for long-term principles and boundaries
-2. Review the **Repair Protocol** and start using it when things break
-3. Add **Stability Pings** after major milestones
-4. Read the **Affective Governance** rules and add relevant ones to your Running Document
-5. Use the **Challenge Protocol** when you disagree with the AI's reasoning
-6. If failures are frequent, consider adopting **TraceSpec** for more structured logging
-
-### If you're starting fresh
-
-1. Start with the **three core templates** (Strategy Master, Canonical Numbers, Running Document)
-2. Add the **Failure Log** when you experience your first breakdown
-3. Read the **Repair Protocol** — this is the most important addition
-4. Add protocols incrementally as you need them
-5. Don't try to adopt everything at once
-
-### When do you need a Strategy Master?
-
-**Use it when:**
-- Your work spans multiple domains (pillars) requiring separation
-- You have long-term strategic logic that shouldn't be re-debated each session
-- Hard boundaries must be enforced consistently
-- Policies apply across many sessions
-
-**Skip it when:**
-- Your collaboration is simple and single-domain
-- The Running Document can carry your strategic context
-- You're just getting started (add it later if needed)
+| File | Status | Purpose |
+|---|---|---|
+| [repair-protocol.md](./repair-protocol.md) | Core concept / conditional document | Stop → Diagnose → Rollback → Note |
+| [stability-ping-template.md](./stability-ping-template.md) | Conditional | Alignment checks after milestones, gaps, or drift signals |
+| [challenge-protocol.md](./challenge-protocol.md) | Advanced / high-value | Structured disagreement, verification, and assumption-testing |
+| [affective-governance.md](./affective-governance.md) | Advanced / optional | Tone, trust, and emotional stability rules |
 
 ---
 
-## The LC-OS Stack
+### Research / audit grade
 
-Here's how all the pieces fit together:
+| File | Status | Purpose |
+|---|---|---|
+| [tracespec-schema.md](./tracespec-schema.md) | Research / audit | Detailed failure schema for traceable analysis |
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                  STRATEGIC LAYER                         │
-│                                                          │
-│   Strategy Master: Principles, boundaries, policies      │
-│                (rarely changes)                          │
-└─────────────────────────────────────────────────────────┘
-                            │
-                      informs ↓
-┌─────────────────────────────────────────────────────────┐
-│                    DAILY OPERATION                       │
-│                                                          │
-│   Running Document ←→ AI Session ←→ Canonical Numbers   │
-│                           ↓                              │
-│                    Work proceeds                         │
-└─────────────────────────────────────────────────────────┘
-                            │
-                    Something breaks
-                            ↓
-┌─────────────────────────────────────────────────────────┐
-│                    REPAIR LAYER                          │
-│                                                          │
-│   Stop → Diagnose → Rollback → Note                     │
-│                           ↓                              │
-│   Update: Running Document + Failure Log                │
-└─────────────────────────────────────────────────────────┘
-                            │
-                    Milestone reached
-                            ↓
-┌─────────────────────────────────────────────────────────┐
-│                  STABILITY LAYER                         │
-│                                                          │
-│   Stability Ping: Aligned? Drift? One improvement?      │
-│                           ↓                              │
-│   Minor corrections before continuing                    │
-└─────────────────────────────────────────────────────────┘
-                            │
-                    Disagreement arises
-                            ↓
-┌─────────────────────────────────────────────────────────┐
-│                  CHALLENGE LAYER                         │
-│                                                          │
-│   Challenge Protocol: Reason → Evidence → Resolution    │
-│                           ↓                              │
-│   Disagreement resolved without conflict                │
-└─────────────────────────────────────────────────────────┘
-                            │
-                    Throughout
-                            ↓
-┌─────────────────────────────────────────────────────────┐
-│                AFFECTIVE GOVERNANCE                      │
-│                                                          │
-│   Tone rules: warm but direct, no false reassurance,    │
-│   honesty over comfort, proportional responses          │
-└─────────────────────────────────────────────────────────┘
+TraceSpec is not for ordinary onboarding. Use it when the collaboration itself needs to be inspected, studied, or audited.
+
+---
+
+## How to adopt Full
+
+### If coming from Minimal
+
+You already have the Running Document and perhaps Canonical Numbers or a Failure Log.
+
+Upgrade in this order:
+
+1. Add a Strategy Master if long-term principles or boundaries are being re-debated
+2. Formalise the Repair Protocol if failures are costly
+3. Add Stability Pings after milestones or long gaps
+4. Use the Challenge Protocol when verification and disagreement matter
+5. Add Affective Governance only if tone, trust, or emotional load affects the work
+6. Use TraceSpec only if you need audit-grade failure analysis
+
+---
+
+### If starting fresh
+
+Do not start with everything unless the project is clearly high-stakes.
+
+Recommended fresh-start path:
+
+1. Create a Running Document
+2. Add Canonical Numbers if numbers matter
+3. Add Strategy Master only if durable principles and boundaries matter
+4. Add Repair Protocol before the first major failure, not after repeated damage
+5. Keep the rest optional until the work asks for it
+
+---
+
+## The modern LC-OS stack
+
+```text
+NATIVE AI WORKSPACE
+  Project files, memory, connectors, chats, tools
+        ↓ supported by
+LC-OS AUTHORITATIVE ARTEFACTS
+  Running Document, Canonical Numbers, Strategy Master
+        ↓ corrected by
+REPAIR AND REVIEW
+  Stop → Diagnose → Rollback → Note; Stability Ping
+        ↓ strengthened by
+CHALLENGE AND GOVERNANCE
+  Challenge Protocol, Affective Governance, TraceSpec when needed
 ```
 
----
+Native AI features make collaboration smoother.
 
-## Principles to Remember
-
-1. **Governance enables reliability** — structure isn't overhead, it's what makes long-horizon work possible
-
-2. **Three sources of truth** — Strategy Master (stable logic), Canonical Numbers (numeric truth), Running Document (active state)
-
-3. **Failures are data** — every breakdown, logged and repaired, makes the system stronger
-
-4. **Repair is a first-class process** — not an emergency, but a normal part of operation
-
-5. **Affective stability matters** — tone drift is as dangerous as numerical drift
-
-6. **Add structure only when needed** — don't over-engineer; let pain guide expansion
+LC-OS artefacts make it governable.
 
 ---
 
-## When to Simplify
+## Principles to remember
 
-More structure isn't always better. Consider simplifying if:
-
-- You're spending more time maintaining documents than doing work
-- Protocols feel bureaucratic rather than protective
-- The collaboration is stable and failures are rare
-
-LC-OS should fade into the background when it's working. If it's constantly demanding attention, something is miscalibrated.
+1. **Use the lightest effective structure** — do not over-govern simple work
+2. **Native memory is not canonical truth** — keep important state human-visible
+3. **Numbers need a home** — if numbers matter, use Canonical Numbers
+4. **Repair is normal** — mistakes should be visible and recoverable
+5. **Challenge improves trust** — structured disagreement is safer than passive agreement
+6. **Tone can be load-bearing** — affective governance matters when emotional dynamics affect work
+7. **Full LC-OS is advanced** — use it when justified by complexity, risk, or duration
 
 ---
 
-*Stability is not the absence of failure; it is the capacity for visible, structured repair.*
+## When to simplify
+
+Simplify if:
+
+- you spend more time maintaining documents than doing the work
+- protocols feel performative rather than protective
+- failures are rare and low-cost
+- the AI workspace already handles the context well
+- users avoid the system because it feels too heavy
+
+LC-OS should fade into the background when it works.
+
+If it constantly demands attention, reduce the level.
+
+---
+
+## Related guidance
+
+- [ADOPTION_LEVELS.md](../ADOPTION_LEVELS.md)
+- [TEMPLATE_STATUS.md](../TEMPLATE_STATUS.md)
+- [MODERN_AI_NOTE.md](../MODERN_AI_NOTE.md)
+- [2026_RELEVANCE_AUDIT.md](../2026_RELEVANCE_AUDIT.md)
+
+---
+
+*Full LC-OS is not the starting point. It is the protective layer for work that has outgrown Minimal.*
