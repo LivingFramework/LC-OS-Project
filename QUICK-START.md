@@ -1,205 +1,240 @@
 # Quick Start Guide
 
-**Get LC-OS running in 30 minutes.**
+**Start with the lightest LC-OS structure that protects your work.**
 
 ---
 
-## Fastest Path: Automated Setup
+## First: choose your level
 
-If you have Node.js (v18+) installed:
+Modern AI tools may already give you project spaces, uploaded files, memory, custom instructions, connectors, and longer context windows.
+
+So do not assume you need the full LC-OS toolkit.
+
+Choose your level:
+
+| Level | Good for | Start with |
+|---|---|---|
+| **Level 0** | Short, low-risk tasks | Native AI project/chat only |
+| **Level 1** | Multi-session work | Running Document |
+| **Level 2** | Work with numbers, citations, or repeat errors | Running Document + Canonical Numbers + light repair |
+| **Level 3** | Long-running or high-stakes projects | Full toolkit |
+| **Level 4** | Research/audit workflows | Full toolkit + TraceSpec |
+
+For details, see [ADOPTION_LEVELS.md](./ADOPTION_LEVELS.md).
+
+---
+
+## Fastest path: automated setup
+
+If you have Node.js v18+ installed:
 
 ```bash
 node scripts/init-project.js
 ```
 
-The script asks 3 questions and creates your project folder, pre-filled with your
-project name and date. Choose Minimal (3 files) or Full (complete toolkit).
+The script asks three questions and creates either a Minimal or Full project folder.
 
-→ [See full instructions](./scripts/README.md)
+→ [See script instructions](./scripts/README.md)
 
-If you don't have Node.js, continue with the manual steps below.
-
----
-
-## What You Need (Manual Path)
-
-- An AI assistant (ChatGPT, Claude, Gemini, or similar)
-- A place to store files (local folder, cloud drive, or GitHub)
-- A project that will span multiple sessions
+If you do not use Node.js, follow the manual path below.
 
 ---
 
-## Step 1: Create Your Running Document (10 minutes)
+## Manual path: recommended modern start
 
-Copy the template from `minimal/running-document-template.md`
+### Step 1 — Decide where project memory lives
+
+Choose one place where the AI and human will look for project state:
+
+- an AI project/workspace
+- a shared document
+- a local folder
+- Google Drive, Notion, Obsidian, GitHub, or another knowledge base
+
+The location matters less than the rule:
+
+> There must be one visible, current, authoritative place for project state.
+
+---
+
+### Step 2 — Create a Running Document
+
+Copy:
+
+```text
+minimal/running-document-template.md
+```
 
 Fill in:
-- Project name
-- What you are trying to accomplish
-- Any constraints or rules that apply
-- Key decisions already made
 
-This is your shared memory. Everything important goes here.
+- project name
+- goal
+- current state
+- key decisions
+- constraints
+- open questions
+- important corrections
 
-**See a fully filled-in example:** `examples/marketing-campaign/running-document.md`
+This is your shared project state.
 
----
-
-## Step 2: Create Your Canonical Numbers File (5 minutes)
-
-Copy the template from `minimal/canonical-numbers-template.md`
-
-Add any numbers that matter:
-- Budgets
-- Deadlines  
-- Targets
-- Rates or prices
-
-If a number is not in this file, it is not authoritative.
-
-**See a fully filled-in example:** `examples/research-paper/canonical-numbers.md`
+If your AI tool supports project files, upload or pin it there. If not, paste or attach it when needed.
 
 ---
 
-## Step 3: Start Your First Session (5 minutes)
+### Step 3 — Add Canonical Numbers only if numbers matter
 
-Begin your AI session with:
+Copy:
 
-```
-Here is our Running Document for this project. Please read it before we begin.
-
-[Paste or attach your Running Document]
-
-Key rules:
-- Reference this document for context and decisions
-- All numbers come from the Canonical Numbers file only
-- If something is unclear, ask one clarifying question then proceed
+```text
+minimal/canonical-numbers-template.md
 ```
 
----
+Use it for:
 
-## Step 4: Work Normally
+- budgets
+- deadlines
+- targets
+- prices
+- rates
+- metrics
+- assumptions
+- source-backed calculations
 
-Do your work as usual. The difference:
-
-- When you make a decision, note it in the Running Document
-- When you confirm a number, add it to Canonical Numbers
-- When the AI forgets context, point it back to the Running Document
-
----
-
-## Step 5: When Something Goes Wrong
-
-Do not push through. Use this sequence:
-
-1. **Stop** — Pause the current task
-2. **Diagnose** — What went wrong and why?
-3. **Rollback** — Return to the last correct state
-4. **Note** — Log the failure and update documents
-
-Then continue from the stable state.
-
-**See real examples of this in action:** `examples/research-paper/failure-log.md`
+If numbers do not matter in your project, skip this file at first.
 
 ---
 
-## Step 6: End of Session
+### Step 4 — Start your first session
 
-Before closing:
+Use a short instruction like this:
 
-- Update the Running Document with any new decisions
-- Add any new numbers to Canonical Numbers
-- Note any failures in your Failure Log
+```text
+We are using a lightweight LC-OS setup for this project.
 
-This takes 2–3 minutes and saves significant time in future sessions.
+The Running Document is the authoritative project state.
+Use it for current context, decisions, constraints, and corrections.
 
-**For a structured version of this ritual:** See `Weekly-Review-Checklist.md`
-
----
-
-## What You Will Notice
-
-After a few sessions:
-
-- Less time re-explaining context
-- Fewer numerical inconsistencies  
-- Clearer sense of what has been decided
-- Faster recovery when things go wrong
-
-These gains compound over time.
-
----
-
-## Next Steps
-
-**If minimal is working:** Continue with minimal. Do not add complexity you do not need.
-
-**If you want more structure:** Explore the `full/` folder for:
-- Repair Protocol (structured recovery)
-- Stability Pings (alignment checks)
-- Challenge Protocol (productive disagreement)
-- Affective Governance (tone management)
-
-**If failures are frequent:** Start using the Failure Log template to track patterns.
-See the example failure logs in `examples/` for what good failure documentation looks like.
-
-**If you want to see how other people use this:** Read the examples:
-- Business: `examples/marketing-campaign/`
-- Research: `examples/research-paper/`
-- Client work: `examples/client-onboarding/`
-- Personal: `examples/personal-productivity/`
-
-**If you want to understand how files evolve:** `examples/history-evolution/`
-
----
-
-## Common Questions
-
-**Which AI does this work with?**
-Any conversational AI: ChatGPT, Claude, Gemini, and others. The principles are model-agnostic.
-
-**Do I need to share the full Running Document every session?**
-Yes, at the start of each new session. The AI does not remember between sessions by default.
-
-**What if my project is simple?**
-You might not need LC-OS. It is designed for work that spans multiple sessions where consistency matters.
-
-**Can I modify the templates?**
-Yes. Adapt them to your needs. The structure is a starting point, not a rigid requirement.
-
-**How do I keep the system from decaying?**
-Run the weekly review (`Weekly-Review-Checklist.md`) once a week. Read the
-`Consistency-Guide.md` for the most common failure modes and how to prevent them.
-
----
-
-## One-Page Summary
-
+If numbers matter, use Canonical Numbers as the only authoritative source for numerical claims.
+If something is unclear, ask briefly before proceeding.
 ```
-FASTEST START
-  node scripts/init-project.js
 
-BEFORE EACH SESSION
-  Share Running Document with AI
+Then work normally.
 
-DURING SESSION  
-  Reference documents for context
-  Note decisions as they are made
-  Numbers only from Canonical Numbers
+---
+
+### Step 5 — Update only what changed
+
+During or after the session:
+
+- add new decisions to the Running Document
+- add confirmed numbers to Canonical Numbers
+- note corrections that should not be forgotten
+- keep the files short enough to be usable
+
+You do not need to write a diary of everything. Capture what future-you and future-AI need.
+
+---
+
+### Step 6 — When something goes wrong
+
+Use the lightweight repair sequence:
+
+```text
+Stop → Diagnose → Rollback → Note
+```
+
+Meaning:
+
+1. **Stop** — pause the current path
+2. **Diagnose** — identify what drifted, broke, or was misunderstood
+3. **Rollback** — return to the last reliable state
+4. **Note** — update the Running Document or Failure Log so it does not recur
+
+Use a formal Failure Log only when failures are repeated, costly, or worth learning from.
+
+---
+
+## Do I need to share the Running Document every session?
+
+Not always.
+
+If your AI tool has a project space or persistent file context, make sure the Running Document is available there and current.
+
+If your AI tool does not reliably carry project state across sessions, paste or attach the Running Document at the start.
+
+The rule is:
+
+> The AI must have access to the current authoritative project state before doing important work.
+
+How you provide that state depends on the tool.
+
+---
+
+## Next steps
+
+**If Level 1 is enough:** stay with Minimal.
+
+**If numbers, citations, or decisions keep drifting:** add Canonical Numbers and lightweight repair.
+
+**If failures repeat:** add a Failure Log.
+
+**If the project becomes long-running or multi-domain:** move to the [Full toolkit](./full/).
+
+**If you need auditability:** read [TEMPLATE_STATUS.md](./TEMPLATE_STATUS.md) and consider TraceSpec.
+
+---
+
+## Common questions
+
+### Which AI does this work with?
+
+Any conversational AI or AI workspace: ChatGPT, Claude, Gemini, local models, agentic tools, or team AI systems.
+
+### Is LC-OS still relevant if my AI has memory?
+
+Yes, but use it differently.
+
+Native memory is convenient. LC-OS artefacts are authoritative. Use native memory for flow; use documents for decisions, numbers, boundaries, and repair.
+
+### What if my project is simple?
+
+Use Level 0 or Level 1. You may not need LC-OS at all.
+
+### Can I modify the templates?
+
+Yes. Adapt them. The templates are starting points, not rules to obey blindly.
+
+### How do I keep the system from becoming bureaucracy?
+
+Use [ADOPTION_LEVELS.md](./ADOPTION_LEVELS.md). If a document is not protecting the work, simplify it or remove it.
+
+---
+
+## One-page summary
+
+```text
+CHOOSE LEVEL
+  Start low. Add structure only when needed.
+
+PROJECT STATE
+  Keep one visible Running Document for important context and decisions.
+
+NUMBERS
+  If numbers matter, use Canonical Numbers as the authority.
+
+WORKFLOW
+  Use native AI project/memory features for convenience.
+  Use LC-OS artefacts for authority.
 
 WHEN THINGS BREAK
-  Stop → Diagnose → Rollback → Note
+  Stop → Diagnose → Rollback → Note.
 
-END OF SESSION
-  Update Running Document
-  Log any failures
-
-ONCE A WEEK
-  Run Weekly-Review-Checklist.md (15 min)
+MAINTENANCE
+  Review weekly, at milestones, or when drift appears.
 ```
 
-That is LC-OS at its simplest.
+That is modern LC-OS at its simplest.
 
 ---
 
-*Start here. Add structure only when you need it.*
+*Start simple. Add structure only when it protects the work.*
