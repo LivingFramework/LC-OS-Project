@@ -1,30 +1,54 @@
 # Minimal LC-OS
 
-**Three templates. Thirty minutes. See if it works for you.**
+**The default starting point for modern AI workspaces.**
 
 ---
 
-## What's Here
+## What this is
 
-The minimal tier gives you the core of LC-OS without the full system. It's enough to:
+Minimal LC-OS is the lightweight version of the toolkit.
 
-- Stop context from evaporating between sessions
-- Keep numbers consistent and traceable
-- Start logging failures instead of hiding them
+Use it when your work spans more than one session and you want important context, decisions, and numbers to stay stable without adopting the full governance system.
 
-If this helps, you can expand to the [Full toolkit](../full/) later. If it doesn't fit your workflow, you've lost half an hour, not a week.
+Modern AI tools may already offer project spaces, memory, uploaded files, and connectors. Minimal LC-OS does not replace those features. It gives them a clearer human-visible structure.
 
 ---
 
-## The Three Templates
+## When to use Minimal
+
+Use Minimal when:
+
+- the project will continue over multiple sessions
+- you need decisions to persist
+- there are important numbers, dates, or assumptions
+- you want a simple way to recover from mistakes
+- the full toolkit would be too heavy
+
+Skip Minimal when:
+
+- the task is short and low-risk
+- your AI workspace already handles the context well enough
+- there are no stable decisions or numbers to preserve
+
+---
+
+## The three templates
 
 ### 1. Running Document
 
-This is your shared memory with the AI.
+**Status:** Core
 
-At the start of every session, you share this document. It contains: what you're working on, what's been decided, what rules apply, and any corrections made along the way.
+This is the current state of the project.
 
-The AI reads it. You're both aligned. Context persists.
+It records:
+
+- what the project is
+- what has been decided
+- what constraints apply
+- what changed recently
+- what the AI should not forget
+
+It can live inside an AI project, shared document, local folder, GitHub repo, or knowledge base.
 
 → [running-document-template.md](./running-document-template.md)
 
@@ -32,11 +56,21 @@ The AI reads it. You're both aligned. Context persists.
 
 ### 2. Canonical Numbers
 
-One file for all numerical data that matters.
+**Status:** Core when numbers matter
 
-The AI doesn't recalculate from memory. It looks here. If a number isn't in this file, it's not authoritative.
+This is the source of truth for numerical claims.
 
-This eliminates the most common source of drift in quantitative work.
+Use it for:
+
+- budgets
+- deadlines
+- prices
+- rates
+- metrics
+- assumptions
+- calculated outputs
+
+If numbers do not matter, skip this at first. If numbers matter, do not rely on model memory.
 
 → [canonical-numbers-template.md](./canonical-numbers-template.md)
 
@@ -44,78 +78,108 @@ This eliminates the most common source of drift in quantitative work.
 
 ### 3. Failure Log
 
-When something goes wrong, you log it.
+**Status:** Conditional
 
-Not for blame. For learning. Each entry captures: what broke, why, how it was fixed, and what changed to prevent recurrence.
+Use this when something meaningful breaks.
 
-Over time, this becomes a map of your collaboration's weak points — and how you've strengthened them.
+Not every tiny mistake needs logging. Use the Failure Log when:
+
+- the same issue repeats
+- the failure causes rework
+- trust is damaged
+- the cause matters for future prevention
+- the project is high-stakes enough to require traceability
 
 → [failure-log-template.md](./failure-log-template.md)
 
 ---
 
-## How to Use This
+## How to use Minimal
 
-### First Session
+### First setup
 
-1. Copy the three templates to wherever you keep project files
-2. Fill in the Running Document with your current project context
-3. Add any existing numbers to the Canonical Numbers file
-4. Share the Running Document with your AI at the start of the session
-5. Tell the AI: *"This is our Running Document. Read it at the start of each session. Reference it for decisions and context."*
+1. Create or upload the Running Document in your chosen workspace
+2. Add Canonical Numbers only if numbers matter
+3. Keep the Failure Log available, but do not force yourself to use it immediately
+4. Tell the AI which artefacts are authoritative
 
-### Every Session After
+Example instruction:
 
-1. Share the Running Document at the start
-2. Work normally
-3. When decisions are made, update the Running Document
-4. When numbers are confirmed, add them to Canonical Numbers
-5. When something breaks, log it in the Failure Log
-
-### When Things Break
-
-Don't push through. Use the simple repair sequence:
-
-1. **Stop** — pause the current task
-2. **Diagnose** — what went wrong and why?
-3. **Rollback** — return to the last stable state
-4. **Note** — log the failure and update the Running Document
-
-This sequence is explained more fully in the [Full toolkit](../full/), but even informally applying it helps.
+```text
+We are using Minimal LC-OS.
+The Running Document is the authoritative project state.
+If numbers matter, Canonical Numbers is the only authoritative source for numerical claims.
+If something breaks, we will use Stop → Diagnose → Rollback → Note.
+```
 
 ---
 
-## What You'll Notice
+### Every session
+
+You do **not** always need to paste the full Running Document.
+
+Instead, make sure the AI has access to the current authoritative state. Depending on the tool, that may mean:
+
+- the document is already inside the AI project
+- the document is attached to the chat
+- the relevant section is pasted into the session
+- the AI is connected to the folder where the file lives
+
+Then work normally.
+
+Update the Running Document only when something important changes.
+
+---
+
+### When things break
+
+Use the lightweight repair habit:
+
+```text
+Stop → Diagnose → Rollback → Note
+```
+
+If the failure is meaningful, add it to the Failure Log.
+
+If the failure is small and already fixed, a short correction in the Running Document may be enough.
+
+---
+
+## What you should notice
 
 After a few sessions:
 
-- Less re-explaining of context
-- Numbers stay consistent
-- When errors happen, you have a record of how you fixed them
-- The collaboration feels more stable
-
-These are small wins, but they compound.
-
----
-
-## When to Upgrade to Full
-
-Consider moving to the [Full toolkit](../full/) if:
-
-- You're working across multiple domains (e.g., finance + research + planning)
-- Emotional tone and trust are becoming factors
-- You want structured challenge and disagreement protocols
-- Failures are frequent enough that you need a taxonomy
-
-The minimal tier is enough for many projects. Don't upgrade out of enthusiasm — upgrade when you feel the limits.
+- less re-explaining of context
+- fewer contradictions about prior decisions
+- more stable numbers and assumptions
+- faster recovery when something goes wrong
+- clearer separation between AI convenience and project authority
 
 ---
 
-## Questions?
+## When to upgrade to Full
 
-If you adopt this and something isn't clear, the templates themselves have guidance. If you want the theory behind the practice, see the [research papers](https://github.com/LivingFramework/LC-OS) — but they're not required.
+Move to the [Full toolkit](../full/) only when Minimal is no longer enough.
+
+Upgrade if:
+
+- the project spans multiple domains or pillars
+- boundaries and long-term principles matter
+- you need structured challenge or verification
+- failures are frequent or costly
+- tone, trust, or emotional dynamics matter
+- auditability becomes important
+
+Do not upgrade out of enthusiasm. Upgrade when the work asks for it.
 
 ---
 
-*Start simple. Add structure only when you need it.*
+## Related guidance
 
+- [ADOPTION_LEVELS.md](../ADOPTION_LEVELS.md) — choose Level 0–4
+- [TEMPLATE_STATUS.md](../TEMPLATE_STATUS.md) — current relevance of each template
+- [MODERN_AI_NOTE.md](../MODERN_AI_NOTE.md) — how LC-OS adapts to modern AI tools
+
+---
+
+*Start simple. Add structure only when it protects the work.*
