@@ -1,100 +1,147 @@
 # Consistency & Discipline Guide
 
-**What this is:** Practical guidance for maintaining LC-OS governance over time.
-The hardest part of any system isn't starting — it's continuing when you're busy.
+**What this is:** Practical guidance for keeping LC-OS useful over time without turning it into bureaucracy.
+
+The hardest part of any governance system is not starting. It is keeping the system current when the work gets busy.
 
 ---
 
-## The Decay Pattern (and How to Break It)
+## The modern decay pattern
 
-Every governance system follows the same decay pattern without active maintenance:
+Modern AI tools may keep project files, memories, chats, and instructions. That helps, but it does not automatically keep the project governed.
 
-```
-Week 1:  Files current. AI has perfect context. Work flows well.
-Week 3:  Files slightly stale. AI uses outdated context. Minor drift.
-Week 6:  Files significantly stale. AI makes decisions based on old assumptions.
-Week 10: Files abandoned. Governance is theater. Problems multiply.
+A typical decay pattern now looks like this:
+
+```text
+Week 1:  AI workspace and LC-OS artefacts are current. Work flows well.
+Week 3:  Some decisions happen in chat but not in the authoritative documents.
+Week 6:  AI memory/project context diverges from the Running Document.
+Week 10: Nobody knows which source is current. Governance becomes theatre.
 ```
 
 LC-OS breaks this pattern with one rule:
 
-> **Update the files before you close the session — not after, not later, now.**
+> **Important changes must be written into the authoritative artefact, not left only in chat or memory.**
 
-This is the single most important discipline in the system.
+Native AI memory is convenient.
 
----
-
-## The Three Maintenance Levels
-
-### Level 1: Per-Session (2 minutes)
-
-After every AI session that produced a decision, correction, or number change:
-
-1. Open the running document
-2. Add any decisions made (even small ones) to the Decisions Log
-3. Add any corrections to the Corrections section
-4. Update "Last updated" date
-5. If any number changed — open canonical numbers and update it
-
-**Total time:** 2 minutes if you do it now. 20 minutes if you wait a week.
-
-### Level 2: Weekly Review (15 minutes)
-
-Use the `Weekly-Review-Checklist.md` to run a structured audit.
-
-**When:** Once per week, same time every week.  
-**Minimum acceptable:** Once every 10 days.  
-**Red line:** Never let files go more than 2 weeks without review.
-
-### Level 3: Strategy Checkpoint (30 minutes)
-
-Run this monthly or after any significant project change.
-
-1. Read your strategy master from start to finish
-2. Ask: "Is this still accurate? Are these still the right principles?"
-3. Review your failure log for patterns — are the same types of failures recurring?
-4. Check if your success criteria are still the right targets
+Canonical LC-OS artefacts are accountable.
 
 ---
 
-## Common Consistency Failures (and Fixes)
+## The three maintenance levels
 
-### "I forget to update the files"
+### Level 1 — Per-session or per-milestone update
 
-**Fix:** Make it a closing ritual, not an extra task. Before you close your laptop
-after a work session, your rule is: "Running document updated? Canonical numbers updated?"
-Two checkboxes. Not a project. A habit.
+After any AI session or milestone that produced a decision, correction, or number change:
+
+1. Update the Running Document if project state changed
+2. Update Canonical Numbers if any number changed
+3. Add a correction if the AI or human got something materially wrong
+4. Log a failure only if it is meaningful enough to learn from
+
+**Total time:** usually 2–5 minutes.
+
+Do not update documents just to prove diligence. Update them when future work depends on the change.
 
 ---
 
-### "The AI doesn't seem to remember our rules"
+### Level 2 — Periodic review
 
-**Fix:** The AI doesn't have memory between sessions. Rules only persist if you put
-them in the running document and share it at session start. If the AI is forgetting
-something — ask yourself: "Is this in my running document?" It probably isn't.
+Use `Weekly-Review-Checklist.md` as a review ritual.
 
-**Session start template (copy-paste this):**
-```
-Here is my running document and canonical numbers for this project.
-Please read both before we begin.
+**When:** weekly, milestone-based, or after a long gap.
 
-[paste running-document.md]
-[paste canonical-numbers.md]
+**Minimum useful rule:** review before important output, handoff, or decision.
 
-Let's continue from where we left off.
+**Red line:** do not let important project state live only in chat history or AI memory.
+
+---
+
+### Level 3 — Strategy checkpoint
+
+Run this monthly, after major project changes, or when the work feels strategically unstable.
+
+1. Read the Strategy Master if you use one
+2. Ask: “Is this still accurate?”
+3. Review repeated failures or drift patterns
+4. Check whether success criteria or boundaries changed
+5. Decide whether to simplify or upgrade the LC-OS level
+
+---
+
+## Common consistency failures and fixes
+
+### “I forget to update the files”
+
+**Fix:** make it a closing ritual, not an extra task.
+
+Before ending a meaningful session, ask:
+
+```text
+Did we make a decision?
+Did a number change?
+Did we correct an important mistake?
+Does future work depend on anything from this session?
 ```
 
+If yes, update the relevant artefact.
+
 ---
 
-### "My canonical numbers file is getting unwieldy"
+### “The AI remembers something, but I cannot tell where it came from”
 
-**Fix:** Archive superseded values rather than deleting them.
+**Fix:** do not treat native AI memory as an authority source.
 
-Mark old rows as `[SUPERSEDED: replaced by X on DATE]` and move them to a
-"History" section at the bottom. The working section stays clean; the history
-is preserved.
+If a remembered fact matters, move it into the Running Document, Canonical Numbers, or Strategy Master.
+
+Ask:
+
+```text
+Is this an actual project decision, number, boundary, or preference?
+If yes, where is the authoritative record?
+```
+
+If there is no record, create one.
+
+---
+
+### “The AI is using old context”
+
+**Fix:** check the source chain.
+
+The issue may be:
+
+- the Running Document is stale
+- the AI project has an old uploaded file
+- the current chat does not have access to the right document
+- a memory conflicts with the current artefact
+- the user made a decision in chat but never updated the document
+
+Repair sequence:
+
+1. Identify the current authoritative version
+2. Update or replace stale files in the AI workspace
+3. Tell the AI which source wins
+4. Add a correction note if the drift caused real rework
+
+Session instruction:
+
+```text
+Use the current Running Document as authoritative project state.
+If your memory or prior chat conflicts with this document, the document wins.
+```
+
+---
+
+### “My Canonical Numbers file is getting unwieldy”
+
+**Fix:** archive superseded values rather than deleting them.
+
+Mark old rows as `[SUPERSEDED: replaced by X on DATE]` and move them to a History section. The working section stays clean; the history is preserved.
 
 Example:
+
 ```markdown
 | Price | $9/month | Current |
 | ~~Price~~ | ~~$12/month~~ | [SUPERSEDED: changed 2026-02-12, see above] |
@@ -102,103 +149,102 @@ Example:
 
 ---
 
-### "I make decisions in sessions but don't log them"
+### “I make decisions in sessions but do not log them”
 
-**Fix:** At the end of every session, before closing, ask:
-"What decisions were made in this session?"
+**Fix:** ask the AI for a decision summary before closing.
 
-If you worked with AI, you can ask the AI directly:
-"Summarize the decisions we made in this session so I can log them."
+Prompt:
 
-Log them in the running document before closing.
-
----
-
-### "The strategy master keeps changing — it's always in draft"
-
-**Fix:** This is a signal that your strategy isn't settled yet. That's fine —
-but you should treat unstable strategy explicitly:
-
-1. Mark it DRAFT in the Document Control section
-2. Don't share it with the AI as if it's authoritative — share it as context
-   with the caveat "this is still being defined"
-3. Once you've validated the core logic (usually after first real user/customer
-   data), promote it to ACTIVE
-
-An unstable strategy master is better than a false stable one.
-
----
-
-### "The failure log feels punishing — I don't want to log failures"
-
-**Fix:** Reframe what the failure log is for.
-
-The failure log is not a record of your mistakes. It is a record of your system
-working. Every entry shows: something went wrong, you caught it, you fixed it,
-you made the system better. That is not failure — that is engineering.
-
-The projects without failure logs don't have fewer failures. They have less
-visibility into failures, and the same mistakes repeat.
-
----
-
-## The Two-Minute Session Close Checklist
-
-Print this and keep it at your desk.
-
+```text
+Summarize only the decisions, changed assumptions, confirmed numbers, and open questions from this session. Do not summarize everything we discussed.
 ```
-Before closing any AI work session:
 
-□ Open running-document.md
-□ Add any decisions made → Decisions Log
-□ Add any corrections → Corrections section  
-□ Update "Last updated" date
+Then copy only the durable items into the Running Document or Canonical Numbers.
 
-□ If any number changed:
-  Open canonical-numbers.md
-  Update the row(s)
-  Add to version history section
+---
 
-□ If something went wrong:
-  Add entry to failure-log.md
+### “The Strategy Master keeps changing”
 
-Total: 2 minutes
+**Fix:** mark unstable strategy as draft.
+
+If the strategic logic is not settled:
+
+1. Mark it `DRAFT`
+2. Do not treat it as authoritative
+3. Use it as context until validated
+4. Promote it to `ACTIVE` only when stable
+
+An unstable Strategy Master is better than a false stable one.
+
+---
+
+### “The Failure Log feels punishing”
+
+**Fix:** use it only for meaningful learning.
+
+A Failure Log is not a shame file. It records where the system improved.
+
+Do not log every tiny error. Log failures when they are repeated, costly, trust-damaging, or likely to recur.
+
+---
+
+## The modern session close checklist
+
+```text
+Before ending a meaningful AI work session:
+
+□ Did we make a durable decision?
+   → Add it to the Running Document.
+
+□ Did any number, date, target, or assumption change?
+   → Update Canonical Numbers.
+
+□ Did the AI rely on stale, wrong, or conflicting context?
+   → Correct the authoritative artefact and, if needed, replace stale project files.
+
+□ Did something meaningful break?
+   → Use Stop → Diagnose → Rollback → Note.
+   → Add to Failure Log if useful.
+
+□ Is the next session likely to start with the right context?
+   → If not, update the project state now.
 ```
 
 ---
 
-## The "Is My AI Context Current?" Test
+## The “Is my AI context current?” test
 
-Before starting any new AI session, ask yourself:
+Before important work, ask:
 
-1. If I share my running document right now, does it reflect what's actually true?
-2. If I share my canonical numbers right now, are all the numbers current?
-3. Are there any decisions made since the last update that my AI doesn't know about?
+1. Does the AI have access to the latest Running Document?
+2. Are current numbers in Canonical Numbers?
+3. Are there stale uploaded files or old project instructions?
+4. Has anything important been decided only in chat?
+5. If the AI’s memory conflicts with the artefact, have I told it which source wins?
 
-If yes to any of these — update before starting. Two minutes now saves twenty
-minutes of correction later.
-
----
-
-## What Good Governance Feels Like (When It's Working)
-
-- Sessions start quickly because context loading is fast
-- The AI rarely asks you to re-explain things it already "knows"
-- When the AI makes a mistake, you catch it quickly because you have reference documents
-- Decisions feel traceable — you can always answer "why did we do this?"
-- Failures are caught early and fixed cleanly
-- You trust the system, so you offload more to it, so you work faster
+If any answer is unclear, fix that before continuing.
 
 ---
 
-## What Good Governance Feels Like (When It's Not)
+## What good governance feels like
 
-- Every session starts with 10–15 minutes of re-context-setting
-- The AI uses numbers or facts you've already corrected
-- You're not sure which version of a decision is current
-- Failures recur because they were fixed in conversation but not in the system
-- You start to distrust the AI, so you do more yourself, so you work slower
+- The AI workspace is convenient, but not the only source of truth
+- Sessions start quickly because current state is available
+- Numbers are checked against Canonical Numbers
+- Decisions are traceable
+- Failures are caught and repaired without drama
+- The system feels lighter over time, not heavier
 
 ---
 
-*The files are not the work. They are the infrastructure that makes the work reliable.*
+## What bad governance feels like
+
+- You cannot tell whether chat, memory, or document is current
+- The AI confidently uses old numbers or outdated assumptions
+- Decisions are remembered differently by different tools
+- You maintain documents nobody uses
+- The process feels like paperwork rather than protection
+
+---
+
+*The files are not the work. They are the visible authority layer that keeps the work reliable.*
