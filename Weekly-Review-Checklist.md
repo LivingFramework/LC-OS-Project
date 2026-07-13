@@ -1,126 +1,153 @@
-# Weekly Review Checklist
+# Review Checklist
 
-**Purpose:** A 15-minute ritual to keep your three authoritative files accurate,
-your AI collaboration healthy, and your project on track.
+**Purpose:** Keep LC-OS artefacts and AI workspace context aligned.
 
-**When to run:** Once per week — Sunday evening or Monday morning recommended.  
+**When to run:** weekly, at major milestones, before important deliverables, or after a long gap.
+
 **Time required:** 10–20 minutes depending on project size.
 
 ---
 
-## Before You Start
+## Before you start
 
-Open these three files:
-- [ ] Strategy Master (`strategy-master.md` or equivalent)
-- [ ] Running Document (`running-document.md` or equivalent)
-- [ ] Canonical Numbers (`canonical-numbers.md` or equivalent)
+Open the artefacts you actually use:
 
----
+- [ ] Running Document
+- [ ] Canonical Numbers, if numbers matter
+- [ ] Strategy Master, if you use one
+- [ ] Failure Log, if failures are being tracked
+- [ ] AI project/workspace files or instructions, if applicable
 
-## Step 1: Numbers Audit (5 min)
-
-Go through your Canonical Numbers file line by line.
-
-- [ ] Are all numbers still current? Update any that changed this week.
-- [ ] Are there any numbers marked TBD that you now have?  Fill them in.
-- [ ] Did you use any numbers in work this week that aren't in the file? Add them now.
-- [ ] Are there any rows marked ⚠️ (unverified / needs follow-up)? Resolve or extend them.
-- [ ] Did you promise any data to someone (a client, a collaborator, a document)
-      that isn't in the file? Add it with source.
-
-**Red flag:** If you find a number in a deliverable you sent this week that isn't in
-the canonical file — log that in the failure log. It means a process broke down.
+Do not review files you do not use. LC-OS should stay proportional to the project.
 
 ---
 
-## Step 2: Running Document Update (5 min)
+## Step 1 — Numbers audit
 
-- [ ] Update "Last updated" date at the top.
-- [ ] Update "Current phase" if it changed.
-- [ ] Add any decisions made this week to the Decisions Log (even small ones).
-- [ ] Resolve any "Open Questions" that got answered this week. If still open, leave them.
-- [ ] Add any new open questions that emerged.
-- [ ] Add a brief session note for any significant AI session this week.
-- [ ] Check the Rules & Agreements section — are all rules still relevant? Add any new ones.
-- [ ] Check Corrections — anything that went wrong this week that isn't logged yet?
+If you use Canonical Numbers, check:
 
-**Red flag:** If your last-updated date is more than 10 days ago, you have drifted.
-Your AI is working from stale context.
+- [ ] Are all current numbers still accurate?
+- [ ] Did any number change since the last review?
+- [ ] Did the AI use a number in output that is not in Canonical Numbers?
+- [ ] Are any rows marked TBD, unverified, or needs follow-up?
+- [ ] Are old values clearly superseded rather than silently deleted?
+
+**Red flag:** A number appeared in a deliverable or decision but is not in Canonical Numbers.
 
 ---
 
-## Step 3: Strategy Master Health Check (3 min)
+## Step 2 — Running Document update
 
-This is a *check*, not an edit. The strategy master should rarely change.
+Check:
+
+- [ ] Is the current objective still accurate?
+- [ ] Is the current phase/status correct?
+- [ ] Are durable decisions logged?
+- [ ] Are resolved questions removed or marked resolved?
+- [ ] Are new open questions captured?
+- [ ] Are corrections or changed assumptions recorded?
+- [ ] Is the “last updated” date current?
+
+**Red flag:** Important decisions exist only in chat history or AI memory.
+
+---
+
+## Step 3 — AI workspace alignment
+
+If you use an AI project, uploaded files, memory, or connectors, check:
+
+- [ ] Is the latest Running Document available to the AI?
+- [ ] Are stale uploaded files removed or replaced?
+- [ ] Do project instructions still match the current workflow?
+- [ ] Are there old memories, summaries, or assumptions that may conflict with the artefacts?
+- [ ] Have you made clear that the authoritative artefact wins over prior chat or memory?
+
+Suggested instruction:
+
+```text
+Use the current Running Document and Canonical Numbers as authoritative.
+If your memory, prior chat, or older uploaded material conflicts with them, these files win.
+```
+
+---
+
+## Step 4 — Strategy check
+
+If you use a Strategy Master, check:
 
 - [ ] Is the scope still accurate?
-- [ ] Are the principles still the right ones?
-- [ ] Are the boundaries still correct?
-- [ ] Did anything happen this week that challenges the strategy?
+- [ ] Are the principles still correct?
+- [ ] Are boundaries still valid?
+- [ ] Did anything happen that challenges the strategy?
+- [ ] Should any draft section be promoted to active, or active section moved back to draft?
 
-If you answered yes to the last question:
-- [ ] Is it a minor adjustment? → Update the section, increment version, log in change log.
-- [ ] Is it a major shift? → Don't update alone. Think it through explicitly, possibly with AI,
-      before changing the strategy master.
-
-**Red flag:** If you're updating the strategy master more than once a month, something
-is structurally unresolved — the strategy isn't stable enough yet.
+**Red flag:** Strategy changes every week. That means it may still be discovery work, not stable governance.
 
 ---
 
-## Step 4: Failure Log Review (2 min)
+## Step 5 — Failure and repair review
 
-- [ ] Anything that went wrong this week that should be logged? Add it.
-- [ ] Are there any open failures (logged but not resolved)? Advance them.
-- [ ] Were there any near-misses — things that almost went wrong but were caught? Log them.
+If you use a Failure Log, check:
 
-**Reminder:** Near-misses are as important as failures. If the system caught something
-before it caused harm, that's worth recording — it shows the system working.
+- [ ] Did anything meaningful go wrong since the last review?
+- [ ] Were there near-misses worth learning from?
+- [ ] Are open failures resolved or still active?
+- [ ] Did the same failure repeat?
+- [ ] Did the repair update the relevant artefact?
 
----
-
-## Step 5: Prepare Next Session Context (2 min)
-
-This is the setup for your next AI session.
-
-- [ ] Open questions: Is the list current?
-- [ ] Current focus: Does it reflect what you'll work on next?
-- [ ] Are there any decisions from this week that your AI doesn't know about yet,
-      that will affect next session's work? Update the running document now.
-
-**The test:** If you started a new AI session right now and shared just your running
-document and canonical numbers, would the AI have accurate, current context?
-If not — update before next session.
+**Reminder:** Near-misses can be as useful as failures. They show where the system caught something before it caused harm.
 
 ---
 
-## Optional: Quick AI Session to Assist the Review
+## Step 6 — Decide whether to simplify or upgrade
 
-If your project is complex, you can run this review *with* your AI:
+Ask:
 
-1. Share your Running Document and Canonical Numbers
-2. Ask: "Help me run the weekly review. Start by checking for any numbers
-   inconsistencies, then help me update the decisions log and open questions."
-3. AI flags inconsistencies; you decide what to update.
+- [ ] Is the current LC-OS level protecting the work?
+- [ ] Is any document unused or burdensome?
+- [ ] Has the project become risky enough to need more structure?
+- [ ] Should we move down a level, stay where we are, or move up?
 
-This turns the review from a solo ritual into a collaborative audit.
-
----
-
-## Signs the Review is Working
-
-- Your AI sessions start faster because context is always current
-- You catch number drift before it reaches deliverables
-- Decisions are traceable — you can always answer "why did we decide that?"
-- Failures are rare because near-misses are caught and fixed
-
-## Signs the Review Has Slipped
-
-- You find yourself explaining things to the AI that you "already told it"
-- Numbers in your work don't match numbers in your files
-- The running document has "last updated" dates more than 2 weeks ago
-- You have open questions in the file that have been resolved but not logged
+Use [ADOPTION_LEVELS.md](./ADOPTION_LEVELS.md) if unsure.
 
 ---
 
-*Run this ritual. Your future self — and your AI — will thank you.*
+## Optional AI-assisted review
+
+For complex projects, you can run the review with your AI.
+
+Prompt:
+
+```text
+Help me run an LC-OS review.
+Check for inconsistencies between the Running Document, Canonical Numbers, open questions, decisions, and project instructions.
+Flag possible drift, but do not change anything without my approval.
+```
+
+The AI may suggest updates. The human decides what becomes authoritative.
+
+---
+
+## Signs the review is working
+
+- Sessions start quickly because current state is available
+- Numbers are stable and traceable
+- Decisions are easy to reconstruct
+- Stale project files get replaced before they cause drift
+- Failures become less mysterious
+- The system feels lighter, not heavier
+
+---
+
+## Signs the review has slipped
+
+- The AI uses old numbers or assumptions
+- You cannot tell whether chat, memory, or document is current
+- The Running Document is stale
+- Project instructions conflict with current practice
+- You explain the same context repeatedly
+- Failure repairs happen in conversation but not in the system
+
+---
+
+*Review only what matters. Keep the authority layer current.*
